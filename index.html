@@ -3,61 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Muhammad Fahresi</title>
+    <title>Portofolio Muhammad Fahresi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav>
-        <div class="logo">MF<span>.</span></div>
-        <div class="nav-links">
-            <a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
-        </div>
+        <div class="logo">MF.</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <main class="main-container">
-        <div class="left-col">
-            <section id="home" class="hero">
-                <img src="profile.jpg" alt="Foto Profil" class="profile-img">
-                <h1>Hi, I'm <span>Muhammad Fahresi</span></h1>
-                <p>Web Developer & Informatics Enthusiast</p>
-                <button class="btn-green">Hubungi Sekarang</button>
-            </section>
+    <header id="home">
+        <div class="profile-img"></div>
+        <h1>Hi, I'm Muhammad Fahresi</h1>
+        <p>Web Developer & Informatics Enthusiast</p>
+        <button>Hubungi Sekarang</button>
+    </header>
 
-            <section id="about">
-                <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="card-container">
+            <div class="card"><h3>Muhammad Fahresi</h3><p>Degree - 2025</p></div>
+            <div class="card"><h3>Drauter Managen Degree</h3><p>Universitas - 2015</p></div>
         </div>
+    </section>
 
-        <div class="right-col">
-            <section id="education">
-                <h2>Education</h2>
-                <div class="card"><h3>Muhammad Fahresi</h3><p>Degree - 2025</p></div>
-                <div class="card"><h3>Drauter Managen Degree</h3><p>Universitashat - 2015</p></div>
-            </section>
-
-            <section id="skills">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="s-card">Web Development</div>
-                    <div class="s-card">Flutter & Dart</div>
-                    <div class="s-card">10 Fingers Typing</div>
-                    <div class="s-card">English (Pro)</div>
-                </div>
-            </section>
-
-            <section id="contact">
-                <h2>Contact</h2>
-                <form class="contact-form">
-                    <input type="text" placeholder="Nama Anda">
-                    <input type="email" placeholder="Email Anda">
-                    <textarea placeholder="Pesan Anda"></textarea>
-                    <button class="btn-green">Kirim Pesan</button>
-                </form>
-            </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-grid">
+            <div class="skill-item">Web Development</div>
+            <div class="skill-item">Flutter & Dart</div>
+            <div class="skill-item">10 Fingers Typing</div>
+            <div class="skill-item">English (Pro)</div>
         </div>
-    </main>
-
+    </section>
 </body>
 </html>
