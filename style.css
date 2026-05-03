@@ -1,16 +1,28 @@
-body { font-family: sans-serif; margin: 0; padding: 0; background: #f4f7f6; }
-nav { display: flex; justify-content: space-between; padding: 20px 50px; background: white; }
-nav ul { display: flex; list-style: none; }
-nav ul li { margin-left: 20px; }
+:root {
+    --primary: #4CAF50;
+    --dark: #2c3e50;
+    --light: #f8f9fa;
+}
 
-header { text-align: center; padding: 50px; }
-.profile-img { width: 150px; height: 150px; background: #ddd; border-radius: 50%; margin: 0 auto 20px; }
+body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #eef2f3; color: var(--dark); }
 
-section { padding: 50px; }
-.card-container { display: flex; gap: 20px; }
-.card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+/* Navigasi */
+nav { display: flex; justify-content: space-between; padding: 20px 10%; align-items: center; background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav a { text-decoration: none; color: var(--dark); font-weight: 600; }
 
-.skill-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.skill-item { background: white; padding: 20px; text-align: center; border-radius: 10px; }
+/* Header */
+header { text-align: center; padding: 100px 20px; }
+.profile-img { width: 180px; height: 180px; background: #ccc; border-radius: 50%; margin: 0 auto 20px; border: 5px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+header h1 span { color: var(--primary); }
 
-button { background: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 20px; cursor: pointer; }
+/* Section & Cards */
+section { padding: 80px 10%; }
+h2 { text-align: center; margin-bottom: 40px; }
+.grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+.card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+
+/* Buttons */
+.btn-main { background: var(--primary); color: white; padding: 12px 30px; border: none; border-radius: 30px; cursor: pointer; font-weight: bold; }
+.btn-contact { background: var(--dark); color: white !important; padding: 8px 20px; border-radius: 20px; }
