@@ -37,6 +37,29 @@
         .social-links a { color: #fff; font-size: 28px; margin: 0 15px; transition: 0.4s; }
         .social-links a:hover { color: var(--primary); transform: translateY(-8px); filter: drop-shadow(0 0 10px var(--primary)); }
         .copyright { font-size: 14px; color: rgba(255,255,255,0.4); margin-top: 20px; }
+
+        /* Responsive Mobile Adjustment */
+@media (max-width: 768px) {
+    nav { padding: 15px 5%; }
+    nav ul { display: none; } /* Opsional: Sembunyikan menu di HP */
+    
+    header { height: auto; padding: 60px 20px; }
+    h2 { font-size: 28px; margin-bottom: 30px; }
+    
+    section { padding: 40px 5%; }
+    
+    .grid-container { 
+        grid-template-columns: 1fr; /* Kartu jadi 1 kolom di HP */
+        gap: 15px;
+    }
+    
+    .profile-img { width: 120px; height: 120px; }
+    
+    .contact-info { 
+        flex-direction: column; /* Kontak info jadi susun ke bawah */
+        gap: 10px; 
+    }
+}
     </style>
 </head>
 <body>
