@@ -1,25 +1,16 @@
-:root { --primary: #22c55e; --bg: #f8fafc; }
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+body { font-family: sans-serif; margin: 0; padding: 0; background: #f4f7f6; }
+nav { display: flex; justify-content: space-between; padding: 20px 50px; background: white; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
 
-body { background: var(--bg); padding: 20px; }
-nav { background: white; padding: 15px 30px; border-radius: 50px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+header { text-align: center; padding: 50px; }
+.profile-img { width: 150px; height: 150px; background: #ddd; border-radius: 50%; margin: 0 auto 20px; }
 
-/* Struktur Utama Dua Kolom */
-.main-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1200px; margin: auto; }
+section { padding: 50px; }
+.card-container { display: flex; gap: 20px; }
+.card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
 
-/* Kiri */
-.left-col { background: white; padding: 40px; border-radius: 30px; }
-.profile-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; }
+.skill-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.skill-item { background: white; padding: 20px; text-align: center; border-radius: 10px; }
 
-/* Kanan */
-.right-col { display: grid; gap: 30px; }
-section { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-
-.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-.s-card, .card { background: #fdfdfd; padding: 20px; border-radius: 15px; border: 1px solid #eee; }
-
-input, textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #eee; border-radius: 8px; }
-.btn-green { background: var(--primary); color: white; border: none; padding: 12px 25px; border-radius: 25px; cursor: pointer; }
-
-/* Responsif: Jika layar kecil, jadi 1 kolom */
-@media (max-width: 900px) { .main-container { grid-template-columns: 1fr; } }
+button { background: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 20px; cursor: pointer; }
