@@ -3,48 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Muhammad Fahresi</title>
+    <title>Portfolio Muhammad Fahresi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <div class="logo">MF.</div>
+        <div class="logo">MF<span>.</span></div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="btn-contact">Contact</a></li>
         </ul>
     </nav>
 
     <header id="home">
         <div class="profile-img"></div>
-        <h1>Hi, I'm Muhammad Fahresi</h1>
+        <h1>Hi, I'm <span>Muhammad Fahresi</span></h1>
         <p>Web Developer & Informatics Enthusiast</p>
-        <button>Hubungi Sekarang</button>
+        <button class="btn-main">Hubungi Sekarang</button>
     </header>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <p>Saya adalah seorang pengembang web yang antusias dengan teknologi informasi. Berdedikasi untuk menciptakan solusi digital yang kreatif dan efisien.</p>
     </section>
 
     <section id="education">
         <h2>Education</h2>
-        <div class="card-container">
-            <div class="card"><h3>Muhammad Fahresi</h3><p>Degree - 2025</p></div>
-            <div class="card"><h3>Drauter Managen Degree</h3><p>Universitas - 2015</p></div>
+        <div class="grid-container">
+            <div class="card"><h3>Bachelor Degree</h3><p>Universitas XYZ - 2025</p></div>
+            <div class="card"><h3>Drauter Management</h3><p>Sekolah Tinggi - 2015</p></div>
         </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skill-grid">
-            <div class="skill-item">Web Development</div>
-            <div class="skill-item">Flutter & Dart</div>
-            <div class="skill-item">10 Fingers Typing</div>
-            <div class="skill-item">English (Pro)</div>
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <div class="grid-container">
+            <div class="card"><h3>Google UX Design</h3><p>Coursera - 2024</p></div>
+            <div class="card"><h3>Flutter Developer</h3><p>Dicoding - 2023</p></div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="grid-container">
+            <div class="card"><h3>E-Commerce App</h3><p>Membangun aplikasi toko online dengan Flutter.</p></div>
+            <div class="card"><h3>Portfolio Web</h3><p>Desain web responsif dengan HTML/CSS.</p></div>
         </div>
     </section>
 </body>
