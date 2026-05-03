@@ -14,6 +14,8 @@ body { background: var(--bg-dark); color: #fff; font-family: 'Outfit', sans-seri
 
 /* Nav */
 nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(15px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.logo { font-size: 28px; font-weight: 700; }
+.logo span { color: var(--primary); }
 nav ul { display: flex; list-style: none; gap: 30px; }
 nav ul li a { text-decoration: none; color: #fff; font-weight: 400; transition: 0.3s; }
 nav ul li a:hover { color: var(--primary); }
@@ -26,7 +28,13 @@ header { height: 80vh; display: flex; flex-direction: column; justify-content: c
 section { padding: 80px 8%; }
 h2 { text-align: center; font-size: 40px; margin-bottom: 50px; }
 .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-.card { background: var(--glass); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; transition: 0.3s; }
+
+.card { background: var(--glass); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; transition: 0.3s; text-align: center; }
 .card:hover { border-color: var(--primary); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 
-.btn-main { background: linear-gradient(90deg, var(--primary), var(--accent)); color: white; padding: 15px 35px; border: none; border-radius: 50px; cursor: pointer; font-weight: 700; }
+/* Ikon Mewah */
+.card i { font-size: 40px; margin-bottom: 20px; display: block; background: linear-gradient(to bottom right, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.card:hover i { filter: drop-shadow(0 0 10px var(--primary)); }
+
+.btn-main { background: linear-gradient(90deg, var(--primary), var(--accent)); color: white; padding: 15px 35px; border: none; border-radius: 50px; cursor: pointer; font-weight: 700; transition: 0.3s; }
+.btn-main:hover { transform: scale(1.05); filter: brightness(1.2); }
