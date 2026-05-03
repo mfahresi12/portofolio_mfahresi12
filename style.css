@@ -1,281 +1,35 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root {
+    --bg: #f8fafc;
+    --primary: #4f46e5;
+    --text: #1e293b;
 }
 
-body {
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); line-height: 1.6; }
 
-/* Header */
-header {
-  background: linear-gradient(rgba(248, 244, 244, 0.7), rgba(236, 231, 231, 0.7)),
-    url('background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-  color: rgb(0, 0, 0);
-}
+nav { display: flex; justify-content: space-between; padding: 20px 10%; align-items: center; background: rgba(255,255,255,0.9); position: sticky; top: 0; backdrop-filter: blur(10px); z-index: 1000; }
+.logo { font-weight: 800; font-size: 1.5rem; }
+.logo span { color: var(--primary); }
+nav ul { display: flex; list-style: none; gap: 30px; }
+nav a { text-decoration: none; color: var(--text); font-weight: 600; }
 
-/* Navigation */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
+header { height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+h1 { font-size: 3.5rem; margin-bottom: 10px; }
+.highlight { color: var(--primary); }
+.cta-button { padding: 15px 30px; background: var(--primary); color: white; border-radius: 50px; text-decoration: none; display: inline-block; margin-top: 20px; font-weight: 600; }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
+section { padding: 100px 10%; }
+.section-title { margin-bottom: 40px; }
 
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
+.education-grid { display: grid; gap: 20px; }
+.edu-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
 
-nav a:hover {
-  color: #007bff;
-}
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+.skill-card { background: white; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center; }
 
-/* Hero Section */
-.hero-text h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
+form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; }
+input, textarea { padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; outline: none; }
+input:focus, textarea:focus { border-color: var(--primary); }
 
-.hero-text p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #0056b3;
-}
-
-/* Section Title */
-.section-title {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.section-title h2 {
-  font-size: 2.5rem;
-  color: #333;
-}
-
-/* About Section */
-.about-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 1rem;
-}
-
-/* Education Section */
-.education-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.education-item {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
-}
-
-.education-item h3 {
-  font-size: 1.75rem;
-  color: #007bff;
-}
-
-.education-item p {
-  font-size: 1.1rem;
-}
-
-/* Experience Section */
-.experience-grid {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-.experience-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.experience-card:hover {
-  transform: translateY(-5px);
-}
-
-.experience-card h3 {
-  font-size: 1.75rem;
-  color: #007bff;
-}
-
-.experience-card p {
-  font-size: 1.1rem;
-}
-
-/* Skills Section */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.skill-card {
-  background: white;
-  padding: 1rem;
-  border-radius: 5px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Contact Form */
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: white;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.form-group textarea {
-  height: 150px;
-  resize: vertical;
-}
-
-.contact-form button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #0056b3;
-}
-
-/* Footer */
-footer {
-  background-color: #e90000;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-}
-
-.social-links {
-  margin-top: 1rem;
-}
-
-.social-links a {
-  color: white;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.social-links a:hover {
-  color: #007bff;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-text p {
-    font-size: 1.2rem;
-  }
-
-  .experience-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  }
-
-  section {
-    padding: 3rem 1rem;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    font-size: 0.9rem;
-  }
-}
+footer { text-align: center; padding: 40px; font-size: 0.9rem; }
